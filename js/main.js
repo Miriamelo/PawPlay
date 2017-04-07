@@ -1,5 +1,7 @@
 //Level 1
 
+
+//deer
 var gameobj = [];
 
 
@@ -7,11 +9,12 @@ setInterval(function(){
     if(gameobj.length > 5){
         return false;
     }
-    var ndiv = document.createElement("div");
+    var ndiv = document.createElement("img");
+    ndiv.src = "./img/tiger-food.svg";
     ndiv.className = "falling";
     document.body.appendChild(ndiv);
     
-    ndiv.style.left = Math.round(Math.random() *window.innerWidth)+"px";
+    ndiv.style.left = Math.round(Math.random()*window.innerWidth)+"px";
     
     var obj = {
         theDiv: ndiv,
@@ -35,11 +38,7 @@ setInterval(function(){
 
 
 
-
-
-
-
-
+//apple
 setInterval(function(){
     if(gameobj.length > 6){
         return false;
