@@ -4,4 +4,11 @@ body {
 
 .wrapper {
     height: 480px;
+    display: grid;
+    grid-template-columns: 20em auto 200px;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    grid-template-areas: 'header header header'
+                            'left article right'
+                            'footer footer footer'
 }
