@@ -96,6 +96,70 @@
 }
 
 
+/* Sign Up Mobile */
+
+#sback{
+    width: 250px;
+    position: absolute;
+    top: 20px;
+    right:20px;
+}
+
+#sbackground {
+    height: 100vh;
+}
+
+#sok{
+    width: 300px;
+    position: absolute;
+    top: 950px;
+    right: 50px;
+}
+#scancel {
+    width: 300px;
+    position: absolute;
+    top: 900px;
+    left: 50px; 
+}
+
+.label {
+    font-family: "GROBOLD";
+    font-size: 34pt;
+    position: absolute;
+    left: 200px;
+    margin: auto;
+    color: green;
+}
+.input {
+    width: 600px;
+    height: 75px;
+    position: absolute;
+    font-size: 30pt;
+    font-family: "Montserrat-Medium";
+    text-align: center;
+    border: 5px solid green;
+}
+
+#SUN {
+    top: 250px;
+    left: 100px;
+    position: absolute;
+}
+
+#SPW {
+    top: 450px;
+    left: 100px;
+    position: absolute;
+}
+
+#SEM{
+    top: 650px;
+    left: 100px;
+    position: absolute;
+}
+
+
+
 
 
 
