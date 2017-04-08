@@ -1,4 +1,79 @@
 
+/* Home Page Mobile */
+
+#hbackground {
+ height: 100vh;
+}
+
+#hlogo {
+    width: 700px;
+    position: absolute;
+    top: 250px;
+    left: 50px;
+}
+
+#hplay{
+    width: 300px;
+    position: absolute;
+    top: 700px;
+    left: 250px;
+}
+#hlogin{
+    width: 300px;
+    position: absolute;
+    top: 850px;
+    left: 250px;
+}
+
+#hrank{
+    width: 300px;
+    position: absolute;
+    top: 1000px;
+    left: 250px;
+}
+
+#hquest{
+    width: 120px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#hset{
+    width: 120px;
+    position: absolute;
+    top: 20px;
+    right:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Level 1 Mobile */
+
 .background1 {
     width: 40vw;
     height: auto;
@@ -6,12 +81,10 @@
     
 }
 
-#container {
+#container{
     width: 100vw;
     height: 100vh;
 }
-
-
 
 #falling{
     display: block;
