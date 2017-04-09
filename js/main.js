@@ -2,16 +2,22 @@
 
 var gameobj = [];
 
+//function backgroundChange() {
+//     document.body.style.backgroundImage = "url(/img/bg-2.svg)";
+//}
 
 setInterval(function(){
+    console.log(gameobj.length);
     if(gameobj.length > 5){
         return false;
     }
-    var ndiv = document.createElement("div");
+    var ndiv = document.createElement("img");
+    ndiv.src = "/img/apple.svg";
     ndiv.className = "falling";
     document.body.appendChild(ndiv);
     
     ndiv.style.left = Math.round(Math.random() *window.innerWidth)+"px";
+    
     
     var obj = {
         theDiv: ndiv,
@@ -27,11 +33,13 @@ setInterval(function(){
         gameobj[i].top+=10;
         gameobj[i].theDiv.style.top= gameobj[i].top+"px";
         if(gameobj[i].top > window.innerHeight){
-            gameobj[i].top = 0;
+            //edited to remove one item of the array to avoid the repetition
+            gameobj.splice(i,1);//.top = 0;
+            
         }
     }
    
-}, 1000/60);
+}, 4000/60);
 
 
 
@@ -45,8 +53,8 @@ setInterval(function(){
         return false;
     }
     var ndiv = document.createElement("img");
-    ndiv.src = "apple.svg";
-    ndiv.className = "fall";
+    ndiv.src = "/img/tiger-food.svg";
+    ndiv.className = "falling";
     document.body.appendChild(ndiv);
     
     ndiv.style.left = Math.round(Math.random() *window.innerWidth)+"px";
@@ -65,7 +73,8 @@ setInterval(function(){
         gameobj[i].top+=5;
         gameobj[i].theDiv.style.top= gameobj[i].top+"px";
         if(gameobj[i].top > window.innerHeight){
-            gameobj[i].top = 0;
+            gameobj.splice(i,1);
+//            gameobj[i].top = 0;
         }
     }
    
