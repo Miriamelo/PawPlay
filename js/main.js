@@ -1,5 +1,7 @@
 //Level 1
 
+
+//deer
 var gameobj = [];
 
 //function backgroundChange() {
@@ -16,7 +18,7 @@ setInterval(function(){
     ndiv.className = "falling";
     document.body.appendChild(ndiv);
     
-    ndiv.style.left = Math.round(Math.random() *window.innerWidth)+"px";
+    ndiv.style.left = Math.round(Math.random()*window.innerWidth)+"px";
     
     
     var obj = {
@@ -43,11 +45,7 @@ setInterval(function(){
 
 
 
-
-
-
-
-
+//apple
 setInterval(function(){
     if(gameobj.length > 6){
         return false;
