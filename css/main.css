@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 body {
     background: url(/img/bg-2.svg) no-repeat center center fixed; 
       -webkit-background-size: contain;
@@ -10,6 +11,217 @@ body {
 
 
 /* Level 1 Mobile */
+=======
+/* Home Page Mobile */
+/*
+@media only screen and (min-width: 320px) and (max-width: 330px){
+  
+    body {
+        overflow: hidden;
+    }
+    
+#hbackground {
+    width: 330px;
+    display: block;
+    background-size: cover;
+    vertical-align: top;
+}
+
+#hlogo {
+    width: 300px;
+    position: absolute;
+    top: 100px;
+    left: 5px;
+}
+
+#hplay{
+    width: 130px;
+    position: absolute;
+    top: 280px;
+    left: 85px;
+}
+#hlogin{
+    width: 130px;
+    position: absolute;
+    top: 340px;
+    left: 85px;
+}
+
+#hrank{
+    width: 130px;
+    position: absolute;
+    top: 400px;
+    left: 85px;
+}
+
+#hquest{
+    width: 50px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#hset{
+    width: 50px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+#htiger{
+    width: 110px;
+    position: absolute;
+    top: 435px;
+    right: 10px;
+}
+
+#hrhino{
+    width: 75px;
+    position: absolute;
+    top: 420px;
+    left: 5px;
+}
+
+#happle {
+    width: 40px;
+    position: absolute;
+    top: 480px;
+    left: 70px;
+}
+
+};*/
+
+
+@media only screen and (min-width: 1200px){
+    body {
+        overflow: hidden;
+    }
+    
+#bhbackground {
+    width: 1500px;
+    display: block;
+    background-size: cover;
+    vertical-align: top;
+}
+
+#hlogo {
+    width: 300px;
+    position: absolute;
+    top: 100px;
+    left: 5px;
+}
+
+#hplay{
+    width: 130px;
+    position: absolute;
+    top: 280px;
+    left: 85px;
+}
+#hlogin{
+    width: 130px;
+    position: absolute;
+    top: 340px;
+    left: 85px;
+}
+
+#hrank{
+    width: 130px;
+    position: absolute;
+    top: 400px;
+    left: 85px;
+}
+
+#hquest{
+    width: 50px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#hset{
+    width: 50px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+#htiger{
+    width: 110px;
+    position: absolute;
+    top: 435px;
+    right: 10px;
+}
+
+#hrhino{
+    width: 75px;
+    position: absolute;
+    top: 420px;
+    left: 5px;
+}
+
+#happle {
+    width: 40px;
+    position: absolute;
+    top: 480px;
+    left: 70px;
+}
+
+};
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/master
 
 
 
@@ -36,11 +248,25 @@ body {
     bottom: 20px;
 }
 
+<<<<<<< HEAD
 #topbar {
     position: fixed;
     top: 0;
     width: 100vw;
     z-index: 2;
+=======
+#sok{
+    width: 300px;
+    position: absolute;
+    top: 950px;
+    right: 50px;
+}
+#scancel {
+    width: 300px;
+    position: absolute;
+    top: 950px;
+    left: 50px; 
+>>>>>>> origin/master
 }
 
 #lefttopwood{
@@ -80,7 +306,85 @@ body {
 }
 
 
+<<<<<<< HEAD
 #score {
+=======
+
+
+/* Login Mobile */
+
+#lback{
+    width: 250px;
+    position: absolute;
+    top: 20px;
+    right:20px;
+}
+
+#lbackground {
+    height: 100vh;
+}
+
+#lok{
+    width: 300px;
+    position: absolute;
+    top: 950px;
+    right: 50px;
+}
+#lcancel {
+    width: 300px;
+    position: absolute;
+    top: 950px;
+    left: 50px; 
+}
+
+.label {
+    font-family: "GROBOLD";
+    font-size: 34pt;
+    position: absolute;
+    left: 200px;
+    margin: auto;
+    color: green;
+}
+.input {
+    width: 600px;
+    height: 75px;
+    position: absolute;
+    font-size: 30pt;
+    font-family: "Montserrat-Medium";
+    text-align: center;
+    border: 5px solid green;
+}
+
+#LUN {
+    top: 350px;
+    left: 100px;
+    position: absolute;
+}
+
+#LPW {
+    top: 550px;
+    left: 100px;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Level 1 Mobile */
+
+.background1 {
+    width: 40vw;
+    height: auto;
+>>>>>>> origin/master
     position: fixed;
     left: 0;
     z-index: 3;

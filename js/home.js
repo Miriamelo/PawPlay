@@ -1,6 +1,8 @@
+/*var background =                    document.getElementById("hbackground");
+   background.src = "bg-1.svg";*/
 
-var background = document.getElementById("hbackground");
-    background.src = "bg-1.svg";
+var bhbackground = document.getElementById("bhbackground");
+    bhbackground.src = "nbbg.svg";
 
 var hlogo = document.getElementById("hlogo");
     hlogo.src = "logo.svg";
@@ -20,4 +22,13 @@ var hquest = document.getElementById("hquest");
 var hset = document.getElementById("hset");
     hset.src = "hset.svg";
 
-    
+var htiger = document.getElementById("htiger");
+    htiger.src = "tiger1.svg";
+
+var hrhino = document.getElementById("hrhino");
+    hrhino.src = "rhino1.svg";
+
+var happle = document.getElementById("happle");
+    happle.src = "apple.svg";
+
+
