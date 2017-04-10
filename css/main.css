@@ -1,162 +1,183 @@
 
 /* Home Page Mobile */
 
-@media only screen and (min-width: 320px) and (max-width: 1000px){
+
+#hbody {
+    background: url(../img/skybg.svg) no-repeat center center fixed; 
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: cover;
+    }
+    
+#hground {
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    left: 0px;
+    }
+    
+#hlogo {
+    width: 90%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+#hplay{
+    height: 10%;
+    position: absolute;
+    top: 45%;
+    left: 30%;
+}
+#hlogin{
+     height: 10%;
+    position: absolute;
+    top: 57%;
+    left: 30%;
+}
+
+#hrank{
+     height: 10%;
+    position: absolute;
+    top: 69%;
+    left: 30%;
+}
+
+#hquest{
+    width: 50px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#hset{
+    width: 50px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+#htiger{
+    width: 150px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#hrhino{
+    width: 75px;
+    position: fixed;
+    bottom: 90px;
+    left: 5px;
+}
+
+#happle {
+    width: 40px;
+    position: fixed;
+    bottom: 80px;
+    left: 70px;
+}
+    
+
+
+
+/* Home Page Desktop */
+
+@media only screen and (min-width: 700px){
   
-    body {
-        overflow: hidden;
+#hbody {
+    background: url(../img/bigsky.svg) no-repeat center center fixed; 
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: cover;
     }
     
-#hbackground {
-    width: 330px;
-    display: block;
-    background-size: cover;
-    vertical-align: top;
-}
-
+#ground {
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    left: 0px;
+    height: 15%;
+    }
+    
 #hlogo {
-    width: 300px;
+    height: 30%;
     position: absolute;
-    top: 100px;
-    left: 5px;
+    top: 10%;
+    left: 5%;
 }
 
 #hplay{
-    width: 130px;
+   height: 10%;
     position: absolute;
-    top: 280px;
-    left: 85px;
+    top: 45%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
 }
 #hlogin{
-    width: 130px;
+    height: 10%;
     position: absolute;
-    top: 340px;
-    left: 85px;
+    top: 57%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
 }
 
 #hrank{
-    width: 130px;
+    height: 10%;
     position: absolute;
-    top: 400px;
-    left: 85px;
+    top: 69%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
 }
 
 #hquest{
-    width: 50px;
+    width: 7%;
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 1%;
+    left: 1%;
 }
 
 #hset{
-    width: 50px;
+    width: 7%;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 1%;
+    right: 1%;
 }
 #htiger{
-    width: 110px;
-    position: absolute;
-    top: 435px;
-    right: 10px;
+    width: 20%;
+    position: fixed;
+    bottom: 10px;
+    right: 2%;
 }
 
 #hrhino{
-    width: 75px;
-    position: absolute;
-    top: 420px;
-    left: 5px;
+    width: 10%;
+    position: fixed;
+    bottom: 90px;
+    left: 3%;
 }
 
 #happle {
-    width: 40px;
-    position: absolute;
-    top: 480px;
-    left: 70px;
+    width: 5%;
+    position: fixed;
+    bottom: 80px;
+    left: 12%;
+}   
 }
-
     
-    /*
-
-@media only screen and (min-width: 1200px){
-    body {
-        overflow: hidden;
-    }
     
-#bhbackground {
-    width: 1500px;
-    display: block;
-    background-size: cover;
-    vertical-align: top;
-}
-
-#hlogo {
-    width: 300px;
-    position: absolute;
-    top: 100px;
-    left: 5px;
-}
-
-#hplay{
-    width: 130px;
-    position: absolute;
-    top: 280px;
-    left: 85px;
-}
-#hlogin{
-    width: 130px;
-    position: absolute;
-    top: 340px;
-    left: 85px;
-}
-
-#hrank{
-    width: 130px;
-    position: absolute;
-    top: 400px;
-    left: 85px;
-}
-
-#hquest{
-    width: 50px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-}
-
-#hset{
-    width: 50px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-}
-#htiger{
-    width: 110px;
-    position: absolute;
-    top: 435px;
-    right: 10px;
-}
-
-#hrhino{
-    width: 75px;
-    position: absolute;
-    top: 420px;
-    left: 5px;
-}
-
-#happle {
-    width: 40px;
-    position: absolute;
-    top: 480px;
-    left: 70px;
-}
-
-};
-
-
     
-}
-*/
+
+
+
+
 
 
 
@@ -164,86 +185,188 @@
 
 /* Welcome Page Mobile */
 
-#lbackground {
- height: 100vh;
-}
+
+#lbody {
+     background: url(../img/bigsky.svg) no-repeat center center fixed; 
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: cover;
+    }
+#lground {
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    left: 0px;
+    height: 20%
+    }
+
 
 #lwelcome {
-    width: 600px;
+     width: 70%;
     position: absolute;
-    top: 150px;
-    left: 100px;
+    top: 5%;
+    left: 15%;
 }
 
 #lx{
-    width: 120px;
+     width: 50px;
     position: absolute;
-    top: 20px;
-    right:20px;
+    top: 5px;
+    right: 5px;
 }
 
 #llogin{
-    width: 300px;
+     height: 10%;
     position: absolute;
-    top: 550px;
-    left: 250px;
+    top: 35%;
+    left: 30%;
 }
 #lsignup{
-    width: 300px;
+    height: 10%;
     position: absolute;
-    top: 700px;
-    left: 250px;
+    top: 47%;
+    left: 30%;
 }
 
 #lguest{
-    width: 300px;
+    height: 10%;
     position: absolute;
-    top: 850px;
-    left: 250px;
+    top: 59%;
+    left: 30%;
 }
 
 #lcancel{
-    width: 300px;
+    height: 10%;
     position: absolute;
-    top: 1000px;
-    left: 250px;
+    top: 71%;
+    left: 30%;
 }
+
+
+
+/* Welcome Page Desktop */
+@media only screen and (min-width: 700px){
+#lbody {
+    background: url(../img/bigsky.svg) no-repeat center center fixed; 
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: cover;
+    }
+    
+#lground {
+    position: fixed;
+    bottom: -5px;
+    width: 100vw;
+    left: 0;
+    height: 12%;
+    }
+
+
+#lwelcome {
+    height: 30%;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+}
+
+#lx{
+     width: 7%;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
+#llogin{
+    height: 10%;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+#lsignup{
+     height: 10%;
+    position: absolute;
+    top: 47%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+#lguest{
+     height: 10%;
+    position: absolute;
+    top: 59%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+#lcancel{
+     height: 10%;
+    position: absolute;
+    top: 71%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+}
+
+
+
+
+
+
+
+
 
 
 /* Sign Up Mobile */
 
-#sback{
-    width: 250px;
-    position: absolute;
-    top: 20px;
-    right:20px;
-}
+#sbody {
+    background: url(../img/blurskybg.svg) no-repeat center center fixed; 
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: cover;
+    }
 
-#sbackground {
-    height: 100vh;
+#sground {
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    height: 20%;
+    left: 0px;
+    filter: blur(2px);
+    }
+
+#sback{
+    width: 125px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
 
 #sok{
-    width: 300px;
+    width: 35%;
     position: absolute;
-    top: 950px;
-    right: 50px;
+    top: 75%;;
+    left: 10%;
 }
 #scancel {
-    width: 300px;
+    width: 35%;
     position: absolute;
-    top: 950px;
-    left: 50px; 
+    top: 75%;;
+    right: 10%;
 }
 
-.label {
-    font-family: "GROBOLD";
-    font-size: 34pt;
-    position: absolute;
-    left: 200px;
-    margin: auto;
-    color: green;
-}
 .input {
     width: 600px;
     height: 75px;
@@ -251,7 +374,13 @@
     font-size: 30pt;
     font-family: "Montserrat-Medium";
     text-align: center;
-    border: 5px solid green;
+    
+    background-image: url(../img/cancel.svg); 
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    
+    
 }
 
 #SUN {
@@ -294,12 +423,6 @@
     top: 950px;
     right: 50px;
 }
-#lcancel {
-    width: 300px;
-    position: absolute;
-    top: 950px;
-    left: 50px; 
-}
 
 .label {
     font-family: "GROBOLD";
@@ -308,15 +431,6 @@
     left: 200px;
     margin: auto;
     color: green;
-}
-.input {
-    width: 600px;
-    height: 75px;
-    position: absolute;
-    font-size: 30pt;
-    font-family: "Montserrat-Medium";
-    text-align: center;
-    border: 5px solid green;
 }
 
 #LUN {

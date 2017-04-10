@@ -1,8 +1,6 @@
 var sback = document.getElementById("sback");
     sback.src = "back.svg";
 
-var sbackground = document.getElementById("sbackground");
-    sbackground.src = "bg-1.svg";
 
 var sok = document.getElementById("sok");
     sok.src = "ok.svg";
@@ -18,3 +16,7 @@ var SPW = document.getElementById("SPW");
 
 var SEM = document.getElementById("SEM");
     SEM.src = "input.svg";
+
+var sground = document.getElementById("sground");
+
+var sbody = document.getElementById("sbody");

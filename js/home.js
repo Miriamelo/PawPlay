@@ -2,7 +2,8 @@
    background.src = "bg-1.svg";*/
 
 var bhbackground = document.getElementById("bhbackground");
-    bhbackground.src = "nbbg.svg";
+
+var hground = document.getElementById("hground");
 
 var hlogo = document.getElementById("hlogo");
     hlogo.src = "logo.svg";
@@ -30,5 +31,7 @@ var hrhino = document.getElementById("hrhino");
 
 var happle = document.getElementById("happle");
     happle.src = "apple.svg";
+
+var hbody = document.getElementById("hbody");
 
 

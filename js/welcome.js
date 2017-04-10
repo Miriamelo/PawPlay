@@ -1,8 +1,9 @@
-var lbackground = document.getElementById("lbackground");
-    lbackground.src = "bg-1.svg";
+
 
 var lwelcome = document.getElementById("lwelcome");
-    lwelcome.src = "hwelcome.svg";
+
+
+var lground = document.getElementById("lground");
 
 var lx = document.getElementById("lx");
     lx.src = "hx.svg";
@@ -18,3 +19,5 @@ var lguest = document.getElementById("lguest");
 
 var lcancel = document.getElementById("lcancel");
     lcancel.src = "cancel.svg";
+
+var lbody = document.getElementById("lbody");
