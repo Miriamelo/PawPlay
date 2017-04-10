@@ -4,20 +4,20 @@ var gameobj = [];
 var animalobj = [];
 var playBtn = '';
 var foodOnAnimal = true;
-var score = 0;
-
-var scoreText;
-
-
-//score
-
 
 
 //animals controls
 function animalss () {
     
+    var nAnimal = document.createElement("img");
+    nAnimal.src = "/img/tiger-head.svg";
+//    nAnimal.className = "";
+    document.getElementById('bottoanimalsmarea').appendChild(nAnimal);
+    
+   
     
    var aniobj = {
+       theImg: nAnimImg,
        left: 0
    }
 };
@@ -45,12 +45,12 @@ setInterval(function () {
     ndiv.style.left = Math.round(Math.random()*window.innerWidth)+"px";
     
     
-    var appleobj = {
+    var appleObj = {
         theDiv: ndiv,
         top: 0,
         points: -1
     }
-    gameobj.push(appleobj);
+    gameobj.push(obj);
     
     }, 1000);
 
@@ -61,7 +61,7 @@ setInterval( function (){
         gameobj[i].theDiv.style.top= gameobj[i].top+"px";
         if(gameobj[i].top > window.innerHeight){
             //edited to remove one item of the array to avoid the repetition
-            gameobj.slice(i,1);//.top = 0;
+            gameobj.splice(i,1);//.top = 0;
             
         }
     }
@@ -84,8 +84,8 @@ setInterval( function (){
     
     var obj = {
         theDiv: ndiv,
-        top: 0,
-        points: 1
+        top: 0
+        points: 1;
     }
     gameobj.push(obj);
     
