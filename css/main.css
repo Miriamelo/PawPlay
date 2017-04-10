@@ -1,20 +1,7 @@
 
-<<<<<<< HEAD
-body {
-    background: url(/img/bg-2.svg) no-repeat center center fixed; 
-      -webkit-background-size: contain;
-      -moz-background-size: contain;
-      -o-background-size: contain;
-      background-size: contain;
-    
-}
-
-
-/* Level 1 Mobile */
-=======
 /* Home Page Mobile */
-/*
-@media only screen and (min-width: 320px) and (max-width: 330px){
+
+@media only screen and (min-width: 320px) and (max-width: 1000px){
   
     body {
         overflow: hidden;
@@ -88,8 +75,8 @@ body {
     left: 70px;
 }
 
-};*/
-
+    
+    /*
 
 @media only screen and (min-width: 1200px){
     body {
@@ -169,6 +156,180 @@ body {
 
     
 }
+*/
+
+
+
+
+
+/* Welcome Page Mobile */
+
+#lbackground {
+ height: 100vh;
+}
+
+#lwelcome {
+    width: 600px;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+
+#lx{
+    width: 120px;
+    position: absolute;
+    top: 20px;
+    right:20px;
+}
+
+#llogin{
+    width: 300px;
+    position: absolute;
+    top: 550px;
+    left: 250px;
+}
+#lsignup{
+    width: 300px;
+    position: absolute;
+    top: 700px;
+    left: 250px;
+}
+
+#lguest{
+    width: 300px;
+    position: absolute;
+    top: 850px;
+    left: 250px;
+}
+
+#lcancel{
+    width: 300px;
+    position: absolute;
+    top: 1000px;
+    left: 250px;
+}
+
+
+/* Sign Up Mobile */
+
+#sback{
+    width: 250px;
+    position: absolute;
+    top: 20px;
+    right:20px;
+}
+
+#sbackground {
+    height: 100vh;
+}
+
+#sok{
+    width: 300px;
+    position: absolute;
+    top: 950px;
+    right: 50px;
+}
+#scancel {
+    width: 300px;
+    position: absolute;
+    top: 950px;
+    left: 50px; 
+}
+
+.label {
+    font-family: "GROBOLD";
+    font-size: 34pt;
+    position: absolute;
+    left: 200px;
+    margin: auto;
+    color: green;
+}
+.input {
+    width: 600px;
+    height: 75px;
+    position: absolute;
+    font-size: 30pt;
+    font-family: "Montserrat-Medium";
+    text-align: center;
+    border: 5px solid green;
+}
+
+#SUN {
+    top: 250px;
+    left: 100px;
+    position: absolute;
+}
+
+#SPW {
+    top: 450px;
+    left: 100px;
+    position: absolute;
+}
+
+#SEM{
+    top: 650px;
+    left: 100px;
+    position: absolute;
+}
+
+
+
+
+/* Login Mobile */
+
+#lback{
+    width: 250px;
+    position: absolute;
+    top: 20px;
+    right:20px;
+}
+
+#lbackground {
+    height: 100vh;
+}
+
+#lok{
+    width: 300px;
+    position: absolute;
+    top: 950px;
+    right: 50px;
+}
+#lcancel {
+    width: 300px;
+    position: absolute;
+    top: 950px;
+    left: 50px; 
+}
+
+.label {
+    font-family: "GROBOLD";
+    font-size: 34pt;
+    position: absolute;
+    left: 200px;
+    margin: auto;
+    color: green;
+}
+.input {
+    width: 600px;
+    height: 75px;
+    position: absolute;
+    font-size: 30pt;
+    font-family: "Montserrat-Medium";
+    text-align: center;
+    border: 5px solid green;
+}
+
+#LUN {
+    top: 350px;
+    left: 100px;
+    position: absolute;
+}
+
+#LPW {
+    top: 550px;
+    left: 100px;
+    position: absolute;
+}
 
 
 
@@ -187,38 +348,19 @@ body {
 
 
 
+<<<<<<< HEAD
+body {
+    background: url(/img/bg-2.svg) no-repeat center center fixed; 
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+    
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Level 1 Mobile */
+=======
 
 
 >>>>>>> origin/master
@@ -310,68 +452,10 @@ body {
 #score {
 =======
 
-
-/* Login Mobile */
-
-#lback{
-    width: 250px;
-    position: absolute;
-    top: 20px;
-    right:20px;
-}
-
-#lbackground {
-    height: 100vh;
-}
-
-#lok{
-    width: 300px;
-    position: absolute;
-    top: 950px;
-    right: 50px;
-}
-#lcancel {
-    width: 300px;
-    position: absolute;
-    top: 950px;
-    left: 50px; 
-}
-
-.label {
-    font-family: "GROBOLD";
-    font-size: 34pt;
-    position: absolute;
-    left: 200px;
-    margin: auto;
-    color: green;
-}
-.input {
-    width: 600px;
-    height: 75px;
-    position: absolute;
-    font-size: 30pt;
-    font-family: "Montserrat-Medium";
-    text-align: center;
-    border: 5px solid green;
-}
-
-#LUN {
-    top: 350px;
-    left: 100px;
-    position: absolute;
-}
-
-#LPW {
-    top: 550px;
-    left: 100px;
-    position: absolute;
-}
-
-
-
-
-
-
+    
+    
+    
+  
 
 
 
