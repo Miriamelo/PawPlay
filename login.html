@@ -7,33 +7,39 @@
     
 </head>
     
-<body>
-   <form> 
-
-    <div id="LUN">
-        <label id="lusername" class="label">Username</label>
-        <br>
-        <br>
-        <br>
-        <input id="luninput" class="input" placeholder="eg. User1234" type="text">
-    </div>
-    
-    
-    <div id="LPW">
-        <label id="lpassword" class="label">Password</label>
-        <br>
-        <br>
-        <br>
-        <input id="lpwinput" class="input" placeholder="eg. Password1234">
-    </div>
-    
-    
-
+<body id="lbody">
+   <form>
+       
+      <input id="luninput" class="input" value="" type="text" placeholder="Please enter your name!">
+       
+       <div id="ldiv"></div>
+       <img id="newuser">
+       
     <img id="lback">
     <img id="lok">
     <img id="lcancel">
-    <img id="lbackground">
+    <img id="lground" src="img/groundbg.svg">
 
+       
+       
+  <select name="animals" id="lanimals">
+      
+       <option value="choose" id="choose" >Choose an Animal </option>
+      
+        <option value="tiger" id="tiger">Tiger</option>
+      
+        <option value="rhino" id="rhine">Black Rhinoceros</option>
+      
+        <option value="butterfly" id="butterfly">Wallace's Golden Birdwing Butterfly</option>
+      
+        <option value="whale" id="whale">Beluga Whale</option>
+      
+        <option value="bear" id="bear">Polar Bear</option>
+      
+        <option value="panda" id="panda">Giant Panda</option>
+ </select>
+       
+       
     </form>
     
    <script src="js/login.js"></script>

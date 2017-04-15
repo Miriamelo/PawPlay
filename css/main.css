@@ -30,17 +30,17 @@
     top: 45%;
     left: 30%;
 }
-#hlogin{
+/*#hlogin{
      height: 10%;
     position: absolute;
     top: 57%;
     left: 30%;
 }
-
+*/
 #hrank{
      height: 10%;
     position: absolute;
-    top: 69%;
+    top: 57%;
     left: 30%;
 }
 
@@ -79,11 +79,9 @@
 }
     
 
-
-
 /* Home Page Desktop */
 
-@media only screen and (min-width: 700px){
+@media only screen and (min-width: 500px){
   
 #hbody {
     background: url(../img/bigsky.svg) no-repeat center center fixed; 
@@ -117,7 +115,7 @@
     bottom: 0;
     margin: 0 auto;
 }
-#hlogin{
+/*#hlogin{
     height: 10%;
     position: absolute;
     top: 57%;
@@ -125,12 +123,12 @@
     right: 0;
     bottom: 0;
     margin: 0 auto;
-}
+}*/
 
 #hrank{
     height: 10%;
     position: absolute;
-    top: 69%;
+    top: 60%;
     left: 0;
     right: 0;
     bottom: 0;
@@ -138,14 +136,14 @@
 }
 
 #hquest{
-    width: 7%;
+    width: 50px;
     position: absolute;
     top: 1%;
     left: 1%;
 }
 
 #hset{
-    width: 7%;
+     width: 50px;
     position: absolute;
     top: 1%;
     right: 1%;
@@ -172,83 +170,10 @@
 }   
 }
     
-    
-    
 
-
-
-
-
-
-
-
-
-/* Welcome Page Mobile */
-
-
+/* Login Mobile */
 #lbody {
-     background: url(../img/bigsky.svg) no-repeat center center fixed; 
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: cover;
-    }
-#lground {
-    position: fixed;
-    bottom: 0px;
-    width: 100vw;
-    left: 0px;
-    height: 20%
-    }
-
-
-#lwelcome {
-     width: 70%;
-    position: absolute;
-    top: 5%;
-    left: 15%;
-}
-
-#lx{
-     width: 50px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-}
-
-#llogin{
-     height: 10%;
-    position: absolute;
-    top: 35%;
-    left: 30%;
-}
-#lsignup{
-    height: 10%;
-    position: absolute;
-    top: 47%;
-    left: 30%;
-}
-
-#lguest{
-    height: 10%;
-    position: absolute;
-    top: 59%;
-    left: 30%;
-}
-
-#lcancel{
-    height: 10%;
-    position: absolute;
-    top: 71%;
-    left: 30%;
-}
-
-
-
-/* Welcome Page Desktop */
-@media only screen and (min-width: 700px){
-#lbody {
-    background: url(../img/bigsky.svg) no-repeat center center fixed; 
+    background: url(../img/skybg.svg) no-repeat center center fixed; 
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
@@ -257,198 +182,105 @@
     
 #lground {
     position: fixed;
-    bottom: -5px;
-    width: 100vw;
-    left: 0;
-    height: 12%;
-    }
-
-
-#lwelcome {
-    height: 30%;
-    position: absolute;
-    top: 5%;
-    left: 15%;
-}
-
-#lx{
-     width: 7%;
-    position: absolute;
-    top: 1%;
-    right: 1%;
-}
-
-#llogin{
-    height: 10%;
-    position: absolute;
-    top: 35%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-}
-#lsignup{
-     height: 10%;
-    position: absolute;
-    top: 47%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-}
-
-#lguest{
-     height: 10%;
-    position: absolute;
-    top: 59%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-}
-
-#lcancel{
-     height: 10%;
-    position: absolute;
-    top: 71%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-/* Sign Up Mobile */
-
-#sbody {
-    background: url(../img/blurskybg.svg) no-repeat center center fixed; 
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: cover;
-    }
-
-#sground {
-    position: fixed;
     bottom: 0px;
     width: 100vw;
-    height: 20%;
     left: 0px;
-    filter: blur(2px);
     }
 
-#sback{
+#lok{
+    width: 35%;
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+}
+#lcancel {
+    width: 35%;
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+}
+#lback{
     width: 125px;
     position: absolute;
     top: 5px;
     right: 5px;
 }
 
-#sok{
-    width: 35%;
-    position: absolute;
-    top: 75%;;
-    left: 10%;
-}
-#scancel {
-    width: 35%;
-    position: absolute;
-    top: 75%;;
-    right: 10%;
-}
-
 .input {
-    width: 600px;
-    height: 75px;
+    top: 20%;
+    left: 15%;
     position: absolute;
-    font-size: 30pt;
+    width: 70%;
+    height: 12%;
+    
+    background-repeat: no-repeat;
+    font-size: 14pt;
+    color: dimgray;
+    
     font-family: "Montserrat-Medium";
     text-align: center;
-    
-    background-image: url(../img/cancel.svg); 
-    background-repeat: no-repeat;
+    background-image: url(../img/nameinput.svg);
     background-color: transparent;
     border: none;
+    background-size: cover;
+}
+
+#lanimals{
+    top: 35%;
+    left: 15%;
+    position: absolute;
+    width: 70%;
+    height: 12%;
+    
+    font-family: "Montserrat-Medium";
+    background-image: url(../img/nameinput.svg);
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    color: dimgray;
+    font-size: 14pt;
+    text-align: center;
+    display: inline-block;
+}
+
+
+#lanim {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    position: absolute;
+    bottom: 32%;
+    left: 35%;
+}
+
+
+#ldiv{
+    display: none;
+    top: 20%;
+    left: 15%;
+    position: absolute;
+    width: 70%;
+    height: 12%;
     
     
+    background-repeat: no-repeat;
+    font-size: 14pt;
+    color: dimgray;
+    
+    font-family: "Montserrat-Medium";
+    text-align: center;
+    background-image: url(../img/nameinput.svg);
+    background-color: transparent;
+    border: none;
+    background-size: cover;
 }
 
-#SUN {
-    top: 250px;
-    left: 100px;
+#newuser {
+    width: 40%;
     position: absolute;
+    bottom: 40%;
+    left: 30%;
 }
-
-#SPW {
-    top: 450px;
-    left: 100px;
-    position: absolute;
-}
-
-#SEM{
-    top: 650px;
-    left: 100px;
-    position: absolute;
-}
-
-
-
-
-/* Login Mobile */
-
-#lback{
-    width: 250px;
-    position: absolute;
-    top: 20px;
-    right:20px;
-}
-
-#lbackground {
-    height: 100vh;
-}
-
-#lok{
-    width: 300px;
-    position: absolute;
-    top: 950px;
-    right: 50px;
-}
-
-.label {
-    font-family: "GROBOLD";
-    font-size: 34pt;
-    position: absolute;
-    left: 200px;
-    margin: auto;
-    color: green;
-}
-
-#LUN {
-    top: 350px;
-    left: 100px;
-    position: absolute;
-}
-
-#LPW {
-    top: 550px;
-    left: 100px;
-    position: absolute;
-}
-
-
-
-
-
 
 
 

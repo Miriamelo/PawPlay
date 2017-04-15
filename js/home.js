@@ -11,8 +11,8 @@ var hlogo = document.getElementById("hlogo");
 var hplay = document.getElementById("hplay");
     hplay.src = "play-btn.svg";
 
-var hlogin = document.getElementById("hlogin");
-    hlogin.src= "login-btn.svg";
+//var hlogin = document.getElementById("hlogin");
+   // hlogin.src= "login-btn.svg";
 
 var hrank = document.getElementById("hrank");
     hrank.src= "ranking-btn.svg";
