@@ -11,6 +11,23 @@ var hlogo = document.getElementById("hlogo");
 var hplay = document.getElementById("hplay");
     hplay.src = "play-btn.svg";
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //var hlogin = document.getElementById("hlogin");
    // hlogin.src= "login-btn.svg";
 

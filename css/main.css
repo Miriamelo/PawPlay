@@ -190,15 +190,12 @@
 #lok{
     width: 35%;
     position: absolute;
-    bottom: 20%;
-    left: 10%;
+    bottom: 25%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
-#lcancel {
-    width: 35%;
-    position: absolute;
-    bottom: 20%;
-    right: 10%;
-}
+
 #lback{
     width: 125px;
     position: absolute;
@@ -207,7 +204,7 @@
 }
 
 .input {
-    top: 20%;
+    bottom: 70%;
     left: 15%;
     position: absolute;
     width: 70%;
@@ -256,7 +253,7 @@
 
 #ldiv{
     display: none;
-    top: 20%;
+     bottom: 70%;
     left: 15%;
     position: absolute;
     width: 70%;
@@ -276,11 +273,237 @@
 }
 
 #newuser {
-    width: 40%;
+     width: 125px;
     position: absolute;
-    bottom: 40%;
-    left: 30%;
+    top: 5px;
+    left: 5px;   
+
 }
+    .animpic {
+        width: 30%;
+        height: 40%;
+        margin: 2px;
+    }
+    #animpicbox {
+        width: 80%;
+        height: 20%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 37%;
+        margin: auto;
+    }
+    #picanim {
+        bottom: 62%;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        position: absolute;
+        width: 300px;
+        height: 30px;
+
+        font-family: "Montserrat-Medium";
+        background-color: transparent;
+        border: none;
+        background-size: cover;
+        color: dimgray;
+        font-size: 14pt;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+/* Login Desktop */
+
+@media only screen and (min-width: 500px){
+  
+#hbody {
+     background: url(../img/skybg.svg) no-repeat center center fixed; 
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: cover;
+    }
+    
+    
+#ground {
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    left: 0px;
+    height: 15%;
+    }
+    
+#lok{
+    height: 10%;
+    position: absolute;
+    top: 65%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+#lback{
+    width: 125px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.input {
+    bottom: 70%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    width: 300px;
+    
+    font-family: "Montserrat-Medium";
+    background-image: url(../img/nameinput.svg);
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    color: dimgray;
+    font-size: 20pt;
+    text-align: center;
+    display: inline-block;
+}
+
+#lanimals{
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    
+    font-family: "Montserrat-Medium";
+    background-image: url(../img/nameinput.svg);
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    color: dimgray;
+    font-size: 20pt;
+    text-align: center;
+    display: inline-block;
+}
+
+
+#lanim {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    position: absolute;
+    bottom: 32%;
+    left: 35%;
+}
+
+
+#ldiv{
+   bottom: 70%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    width: 300px;
+    
+    font-family: "Montserrat-Medium";
+    background-image: url(../img/nameinput.svg);
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    color: dimgray;
+    font-size: 20pt;
+    text-align: center;
+    display: none;
+}
+
+#newuser {
+    width: 125px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+    .animpic {
+        width: 80px;
+        height: 100px;
+    }
+    #animpicbox {
+        width: 550px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 42%;
+        margin: auto;
+    }
+    #picanim {
+        bottom: 58%;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        position: absolute;
+        width: 400px;
+        height: 30px;
+
+        font-family: "Montserrat-Medium";
+        background-color: transparent;
+        border: none;
+        background-size: cover;
+        color: dimgray;
+        font-size: 20pt;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
