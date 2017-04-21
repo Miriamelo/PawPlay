@@ -1,8 +1,8 @@
     var lback = document.getElementById("lback");
-        lback.src = "back.svg";
+        lback.src = "img/back.svg";
 
     var lok = document.getElementById("lok");
-        lok.src = "ok.svg";
+        lok.src = "img/ok.svg";
 
     
     var lbody = document.getElementById("lbody");
@@ -47,7 +47,7 @@
             });
 
     var newuser = document.getElementById("newuser");
-        newuser.src = "newuser.svg";
+        newuser.src = "img/newuser.svg";
 
 var lcurclick = "";
 console.log(lcurclick);

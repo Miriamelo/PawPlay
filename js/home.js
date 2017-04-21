@@ -6,48 +6,31 @@ var bhbackground = document.getElementById("bhbackground");
 var hground = document.getElementById("hground");
 
 var hlogo = document.getElementById("hlogo");
-    hlogo.src = "logo.svg";
+    hlogo.src = "img/logo.svg";
 
 var hplay = document.getElementById("hplay");
-    hplay.src = "play-btn.svg";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    hplay.src = "img/play-btn.svg";
 
 //var hlogin = document.getElementById("hlogin");
    // hlogin.src= "login-btn.svg";
 
 var hrank = document.getElementById("hrank");
-    hrank.src= "ranking-btn.svg";
+    hrank.src= "img/ranking-btn.svg";
 
 var hquest = document.getElementById("hquest");
-    hquest.src = "hquest.svg";
+    hquest.src = "img/hquest.svg";
 
 var hset = document.getElementById("hset");
-    hset.src = "hset.svg";
+    hset.src = "img/hset.svg";
 
 var htiger = document.getElementById("htiger");
-    htiger.src = "tiger1.svg";
+    htiger.src = "img/tiger1.svg";
 
 var hrhino = document.getElementById("hrhino");
-    hrhino.src = "rhino1.svg";
+    hrhino.src = "img/rhino1.svg";
 
 var happle = document.getElementById("happle");
-    happle.src = "apple.svg";
+    happle.src = "img/apple.svg";
 
 var hbody = document.getElementById("hbody");
 
