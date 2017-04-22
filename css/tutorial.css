@@ -1,3 +1,5 @@
+
+@media only screen and (min-width: 500px){
 #tbody {
         background: url("../img/bigsky.svg") no-repeat center center fixed; 
         background-size: cover;
@@ -16,7 +18,7 @@
         height: 15%;
     }
     
- #tlefttopwood{
+#tlefttopwood{
         position: fixed;
         left: 0;
         top: 0;
@@ -135,6 +137,7 @@
 
 #ttut1 {
     height: 65%;
+    width: 90%;
     position: absolute;
     left: 0;
     right: 0;
@@ -146,15 +149,15 @@
 
 #tutnext1{
     height: 10%;
-    left: 45%;
+     left: 40%;
     bottom: 12%;
     position: absolute;
     display: inline-block;
 }
 
-
 #ttut2{
-    height: 65%;
+     height: 65%;
+    width: 90%;
     position: absolute;
     left: 0;
     right: 0;
@@ -166,14 +169,15 @@
 
 #tutnext2{
     height: 10%;
-    left: 45%;
+    left: 40%;
     bottom: 12%;
     position: absolute;
     display: none;
 }
 
 #ttut3{
-    height: 65%;
+     height: 65%;
+    width: 90%;
     position: absolute;
     left: 0;
     right: 0;
@@ -181,23 +185,25 @@
     bottom: 0;
     margin: auto;
     display: none;
+    overflow: hidden;
 }
 
 #tutnext3{
     height: 10%;
-    left: 45%;
+     left: 40%;
     bottom: 12%;
     position: absolute;
     display: none;
 }
 
 #ttut4{
-    height: 75%;
+     height: 65%;
+    width: 90%;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
-    bottom: -17%;
+    bottom: 0;
     margin: auto;
     display: none;
     overflow: hidden;
@@ -205,12 +211,15 @@
 
 #tutnext4{
     height: 10%;
-    left: 45%;
+    left: 40%;
     bottom: 12%;
     position: absolute;
     display: none;
 }
 
+
+    
+};
 
 
 
