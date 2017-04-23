@@ -149,7 +149,7 @@
 
 #tutnext1{
     height: 10%;
-     left: 40%;
+     left: 45%;
     bottom: 12%;
     position: absolute;
     display: inline-block;
@@ -169,7 +169,7 @@
 
 #tutnext2{
     height: 10%;
-    left: 40%;
+     left: 45%;
     bottom: 12%;
     position: absolute;
     display: none;
@@ -190,7 +190,7 @@
 
 #tutnext3{
     height: 10%;
-     left: 40%;
+       left: 45%;
     bottom: 12%;
     position: absolute;
     display: none;
@@ -211,15 +211,21 @@
 
 #tutnext4{
     height: 10%;
-    left: 40%;
+      left: 45%;
     bottom: 12%;
     position: absolute;
     display: none;
 }
 
+#tskip{
+    height: 8%;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
 
-    
 };
+
 
 
 
