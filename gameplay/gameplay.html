@@ -33,7 +33,7 @@
     height: 80px;
     width: 80px;
     position: absolute;
-    z-index: -1;
+    z-index: -10;
     }
         
     #topbar {
@@ -117,6 +117,55 @@
             font-size: 1.5em;
         }
         
+        #gameOver {
+            position: fixed;
+            background-image: url(img/gameover-frame.svg);
+            background-repeat: no-repeat;
+            height: 50%;
+            width: 30%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 999;
+            padding: 10px;
+        }
+        
+        #innerGameOver{
+            position: absolute;
+            width: 90%;
+            height: 43%;
+/*            margin-top: 10%;*/
+            bottom: 0;
+/*            margin: 5% 0 10% 5%;*/
+        }
+        
+        #innerGameOver p {
+            position: relative;
+            top: 2%;
+            left: 35%;
+            color: brown;
+            font-size: 1.5em;
+        }
+        
+        #gameoverButs {
+            position: absolute;
+            width: 50px;
+            cursor: pointer;
+            bottom: 0;
+            display: inline;
+            margin: 5% 4% 5% 4%;
+        }
+        
+        .gobutreplay {
+            left: 0;
+        }
+        
+         .gobuthome {
+             position: absolute;
+            right: 0;
+        }
         
     @media (max-width: 700px) {
         body {
@@ -133,7 +182,20 @@
             z-index: -2;
             width: 100vw;
             display: none;
-        }     
+        }   
+        
+         #gameOver {
+            position: absolute;
+            background-image: url(img/gameover-frame.svg);
+            background-repeat: no-repeat;
+            height: 80vh;
+            width: 80vw;
+            top: 15vh;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
 }
         
     </style>
@@ -142,6 +204,14 @@
     <body onload="init()";>
         
         <div id= "playingArea">
+            <div></div>
+            <div id="gameOver">    
+                <div id="innerGameOver">
+                    <p>TIME OUT!</p>
+                    <img id="gameoverButs" class="gobutreplay" src="img/replay.svg" onclick="window.location.href='gameplay.html'"/>
+                    <img id="gameoverButs" class="gobuthome" src="img/home.svg" onclick="window.location.href='./login.html'"/>
+                </div>
+            </div>
             
             <div id="topbar">
                 <div id="score">
