@@ -55,32 +55,68 @@ console.log(lcurclick);
 var ltiger = document.getElementById("tiger");
     ltiger.addEventListener("click", function(){
        lcurclick = tiger;
+        ltiger.style.border = "2px dotted green";
+        lrhino.style.border = "none";
+        lbear.style.border = "none";
+        lbutter.style.border = "none";
+        lwhale.style.border = "none";
+        lpanda.style.border = "none";
         console.log(lcurclick);
     });
 var lrhino = document.getElementById("rhino");
     lrhino.addEventListener("click", function(){
        lcurclick = rhino;
+        lrhino.style.border = "2px dotted green";
+        ltiger.style.border = "none";
+        lbear.style.border = "none";
+        lbutter.style.border = "none";
+        lwhale.style.border = "none";
+        lpanda.style.border = "none";
         console.log(lcurclick);
     });
 
 var lbear = document.getElementById("bear");
     lbear.addEventListener("click", function(){
        lcurclick = bear;
+        lbear.style.border = "2px dotted green";
+        ltiger.style.border = "none";
+        lrhino.style.border = "none";
+        lbutter.style.border = "none";
+        lwhale.style.border = "none";
+        lpanda.style.border = "none";
         console.log(lcurclick);
     });
 var lbutter = document.getElementById("butterfly");
     lbutter.addEventListener("click", function(){
        lcurclick = butterfly;
+        lbutter.style.border = "2px dotted green";
+        ltiger.style.border = "none";
+        lrhino.style.border = "none";
+        lbear.style.border = "none";
+        lwhale.style.border = "none";
+        lpanda.style.border = "none";
         console.log(lcurclick);
     });
 var lwhale = document.getElementById("whale");
      lwhale.addEventListener("click", function(){
        lcurclick = whale;
+        lwhale.style.border = "2px dotted green";
+        ltiger.style.border = "none";
+        lrhino.style.border = "none";
+        lbear.style.border = "none";
+        lbutter.style.border = "none";
+        lpanda.style.border = "none";
         console.log(lcurclick);
     });
 var lpanda = document.getElementById("panda");
     lpanda.addEventListener("click", function(){
        lcurclick = panda;
+        lpanda.style.border = "2px dotted green";
+        ltiger.style.border = "none";
+        lrhino.style.border = "none";
+        lbear.style.border = "none";
+        lbutter.style.border = "none";
+        lwhale.style.border = "none";
         console.log(lcurclick);
     });
 
