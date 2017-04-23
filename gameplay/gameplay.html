@@ -2,11 +2,9 @@
     <style type="text/css">
     
     body {
-        background: url(./img/g-bg-desktop.svg) no-repeat center center fixed; 
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
+        background: url(./img/g-bg-desktop.svg); 
         background-size: cover;
+        overflow: hidden;
     
         }
         
@@ -16,14 +14,14 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        z-index: -4;
+        z-index: 0;
     }
     #player {
         position: absolute;
 /*        top: 650;*/
-        bottom: 50;
+        bottom: 8%;
         left: 228;
-        width: 150;
+        width: 125;
         height: auto;
          z-index: 99;
     }
@@ -149,23 +147,42 @@
             font-size: 1.5em;
         }
         
-        #gameoverButs {
+        .gameoverButs {
             position: absolute;
             width: 50px;
             cursor: pointer;
             bottom: 0;
-            display: inline;
+            display: inline block;
             margin: 5% 4% 5% 4%;
+            
         }
         
-        .gobutreplay {
+        #gobutreplay {
             left: 0;
         }
         
-         .gobuthome {
-             position: absolute;
+         #gobuthome {
+            position: absolute;
             right: 0;
         }
+        #music {
+            position: absolute;
+        }
+        
+         #gameOver {
+            position: absolute;
+            background-image: url(img/gameover-frame.svg);
+            background-repeat: no-repeat;
+            top: 15vh;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 1;
+             
+        }
+        
+       
         
     @media (max-width: 700px) {
         body {
@@ -195,6 +212,8 @@
             right: 0;
             bottom: 0;
             margin: auto;
+            z-index: 1;
+             
         }
 }
         
@@ -203,16 +222,24 @@
    
     <body onload="init()";>
         
-        <div id= "playingArea">
-            <div></div>
+         <div id= "playingArea">
             <div id="gameOver">    
                 <div id="innerGameOver">
                     <p>TIME OUT!</p>
-                    <img id="gameoverButs" class="gobutreplay" src="img/replay.svg" onclick="window.location.href='gameplay.html'"/>
-                    <img id="gameoverButs" class="gobuthome" src="img/home.svg" onclick="window.location.href='./login.html'"/>
+                    
+                <img class="gameoverButs" id="gobutreplay" src="img/replay.svg" onclick="window.location.href='gameplay.html'"/>
+                   
+                <img class="gameoverButs" id="gobuthome" src="img/home.svg" onclick="window.location.href='../login.html'"/>
+                
                 </div>
             </div>
-            
+        </div>
+ <!--Music Player -->       
+    <audio controls autoplay loop id="music">
+                <source src="../backgroundmusic.mp3">
+            </audio>
+        
+ <!--Top Bar -->      
             <div id="topbar">
                 <div id="score">
                     <div id="textscore">
@@ -236,10 +263,11 @@
             
              <img id="bottombg" src="./img/g-bgbot-desktop.svg" alt=""/>
             
-        </div>
-        
+    
         
         <script>
+ //make game over appear with points
+            
         var playerimg = document.getElementById("playerimg");
         playerimg.src = localStorage.animal;
             
@@ -390,15 +418,25 @@
             }
             scoreup = document.getElementById('testscore');
             scoreup.innerHTML = (score);
+            
                 }
             //end score count
 
-
+            
+            
+            
+            
+            
+            
         function clear() {
             for(i=0;i<Amount;i++)
          document.getElementById("si"+i).style.display='none';
         }
 
+                
+          
+            
+            
         
         
         </script>
