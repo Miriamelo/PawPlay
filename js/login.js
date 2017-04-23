@@ -18,6 +18,7 @@
     var lcancel = document.getElementById("lcancel");
 
     var lok = document.getElementById("lok");
+
             lok.addEventListener("click", function(){
             
             console.log(localStorage.firstName);
@@ -36,6 +37,29 @@
                     console.log("ok");
                 }
 
+var animal = localStorage.animal;
+
+/*
+lok.addEventListener("click", function(){
+   if(localStorage.animal == undefined){
+       localStorage.animal = nimg.src;
+       console.log(localStorage.animal);
+   } 
+});
+
+*/
+if(localStorage.animal != undefined){
+    document.getElementById("nimg");
+    nimg.src = localStorage.animal;
+}
+
+
+
+
+
+
+
+
     var newuser = document.getElementById("newuser");
             newuser.addEventListener("click", function(){
                     console.log("cancel");
@@ -50,11 +74,11 @@
         newuser.src = "img/newuser.svg";
 
 var lcurclick = "";
-console.log(lcurclick);
+
 
 var ltiger = document.getElementById("tiger");
     ltiger.addEventListener("click", function(){
-       lcurclick = tiger;
+       lcurclick = ltiger;
         ltiger.style.border = "2px dotted green";
         lrhino.style.border = "none";
         lbear.style.border = "none";
@@ -62,22 +86,33 @@ var ltiger = document.getElementById("tiger");
         lwhale.style.border = "none";
         lpanda.style.border = "none";
         console.log(lcurclick);
+        
+        nimg.src = ltiger.src;
+        localStorage.animal = nimg.src;
+        console.log("tiger");
+        
     });
+
 var lrhino = document.getElementById("rhino");
     lrhino.addEventListener("click", function(){
-       lcurclick = rhino;
+       lcurclick = lrhino;
         lrhino.style.border = "2px dotted green";
         ltiger.style.border = "none";
         lbear.style.border = "none";
         lbutter.style.border = "none";
         lwhale.style.border = "none";
         lpanda.style.border = "none";
-        console.log(lcurclick);
+      console.log(lcurclick);
+        
+        nimg.src = lrhino.src;
+        localStorage.animal = nimg.src;
+        
+        console.log("rhino");
     });
 
 var lbear = document.getElementById("bear");
     lbear.addEventListener("click", function(){
-       lcurclick = bear;
+       lcurclick = lbear;
         lbear.style.border = "2px dotted green";
         ltiger.style.border = "none";
         lrhino.style.border = "none";
@@ -85,10 +120,15 @@ var lbear = document.getElementById("bear");
         lwhale.style.border = "none";
         lpanda.style.border = "none";
         console.log(lcurclick);
+        
+        nimg.src = lbear.src;
+        localStorage.animal = nimg.src;
+        
     });
+
 var lbutter = document.getElementById("butterfly");
     lbutter.addEventListener("click", function(){
-       lcurclick = butterfly;
+       lcurclick = lbutter;
         lbutter.style.border = "2px dotted green";
         ltiger.style.border = "none";
         lrhino.style.border = "none";
@@ -96,10 +136,14 @@ var lbutter = document.getElementById("butterfly");
         lwhale.style.border = "none";
         lpanda.style.border = "none";
         console.log(lcurclick);
+        
+        nimg.src = lbutter.src;
+        localStorage.animal = nimg.src;
     });
+
 var lwhale = document.getElementById("whale");
      lwhale.addEventListener("click", function(){
-       lcurclick = whale;
+       lcurclick = lwhale;
         lwhale.style.border = "2px dotted green";
         ltiger.style.border = "none";
         lrhino.style.border = "none";
@@ -107,10 +151,14 @@ var lwhale = document.getElementById("whale");
         lbutter.style.border = "none";
         lpanda.style.border = "none";
         console.log(lcurclick);
+         
+         nimg.src = lwhale.src;
+         localStorage.animal = nimg.src;
     });
+
 var lpanda = document.getElementById("panda");
     lpanda.addEventListener("click", function(){
-       lcurclick = panda;
+       lcurclick = lpanda;
         lpanda.style.border = "2px dotted green";
         ltiger.style.border = "none";
         lrhino.style.border = "none";
@@ -118,5 +166,20 @@ var lpanda = document.getElementById("panda");
         lbutter.style.border = "none";
         lwhale.style.border = "none";
         console.log(lcurclick);
+        
+        nimg.src = lpanda.src;
+        localStorage.animal = nimg.src;
     });
+
+
+
+
+
+
+
+
+
+
+
+
 
