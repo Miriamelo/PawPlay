@@ -39,15 +39,7 @@
 
 var animal = localStorage.animal;
 
-/*
-lok.addEventListener("click", function(){
-   if(localStorage.animal == undefined){
-       localStorage.animal = nimg.src;
-       console.log(localStorage.animal);
-   } 
-});
 
-*/
 if(localStorage.animal != undefined){
     document.getElementById("nimg");
     nimg.src = localStorage.animal;
@@ -55,8 +47,10 @@ if(localStorage.animal != undefined){
 }
 
 else{
-    nimg.src = ltiger.src;
+   localStorage.animal= "choosetiger.svg";
+    console.log(localStorage.animal);
 }
+
 
     var newuser = document.getElementById("newuser");
             newuser.addEventListener("click", function(){
@@ -72,6 +66,8 @@ else{
 
                 localStorage.removeItem("firstName");
                 localStorage.removeItem("animal");
+                console.log(localStorage.firstName);
+                console.log(localStorage.animal);
             });
 
     var newuser = document.getElementById("newuser");

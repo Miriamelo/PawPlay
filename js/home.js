@@ -15,7 +15,7 @@ var hplay = document.getElementById("hplay");
    // hlogin.src= "login-btn.svg";
 
 var hrank = document.getElementById("hrank");
-    hrank.src= "img/ranking-btn.svg";
+    hrank.src= "img/ranking-btngray.svg";
 
 var hquest = document.getElementById("hquest");
     hquest.src = "img/hquest.svg";
