@@ -122,13 +122,13 @@
             background-image: url(img/gameover-frame.svg);
             background-repeat: no-repeat;
             height: 50%;
-            width: 25%;
+            width: 20%;
             top: 0;
-            left: 0;
+            left: 10%;
             right: 0;
             bottom: 0;
             margin: auto;
-            padding: 10px;
+/*            padding: 10px;*/
             display: none;
             z-index: 500;
         }
@@ -209,6 +209,22 @@
             z-index: 490;
             background-color: rgba(92, 42, 5, 0.8);
         }
+        
+        #levelup{
+            position: fixed;
+            background-image: url(img/levelup.svg);
+            background-repeat: no-repeat;
+            height: 50%;
+            width: 25%;
+            top: 0;
+            left: 10%;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+/*            padding: 10px;*/
+            display: none;
+            z-index: 500;
+        }
 
 
     @media (max-width: 700px) {
@@ -236,8 +252,8 @@
             right: 0;
             bottom: 0;
             margin: auto;
+            display: none;
             z-index: 500;
-            display: block;
         }
 
 }
@@ -251,6 +267,18 @@
             <div id="innerGameOver">
                 <div id="finalScoreContainer">
                 <p id="finalscore">0</p>
+                    </div>
+                <div id="buttonsGameOver">
+                    <img id="gobutreplay" class="gameoverbuts" src="img/replay.svg" onclick="window.location.href='gameplay.html'">
+                    <img id="gobuthome" class="gameoverbuts" src="img/home.svg" onclick="window.location.href='../login.html'">
+                </div>
+            </div>
+        </div>
+        
+        <div id="levelup">
+        <div id="innerGameOver">
+                <div id="finalScoreContainer">
+                <p id="finalscore2">0</p>
                     </div>
                 <div id="buttonsGameOver">
                     <img id="gobutreplay" class="gameoverbuts" src="img/replay.svg" onclick="window.location.href='gameplay.html'">
@@ -297,8 +325,16 @@
         <div id="timer"></div>
         
         <script>
+            
+            if(localStorage.animal != undefined){ 
             var playerimg = document.getElementById("playerimg");
-            playerimg.src = localStorage.animal;
+                playerimg.src = localStorage.animal;
+            console.log(localStorage.animal);
+            }
+            
+            else{
+                localStorage.animal= "choosetiger.svg";
+            }
 
         function FallItem()
         {
@@ -434,15 +470,28 @@
         var sec = timeRemainig%60;
         var strTimeRemaining = (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0"+sec : sec);
         document.getElementById("timer").innerHTML = strTimeRemaining;
-        if(timeRemainig == 0){
+        
+        if(timeRemainig == 0 && score <= 10){
+            
             gameOver = true;
+            
             var nbgDiv = document.createElement("div");
             nbgDiv.className = "bgDiv";
             document.body.appendChild(nbgDiv);
             var gameOverScr = document.getElementById("gameOver");
             gameOverScr.style.display = "block";
             document.getElementById("finalscore").innerHTML = "Your Score: " + score;
-        }else
+        }
+        
+        if (timeRemainig == 0 && score >= 4){
+            gameOver = true;
+            var gamewinScr = document.getElementById("levelup");
+            gamewinScr.style.display = "block";
+            gameOverScr.style.display = "none";
+            document.getElementById("finalscore2").innerHTML = "Your Score: " + score;
+        }
+        
+        else 
             setTimeout(updateRemainingTime, 1000);
     }
                
