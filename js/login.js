@@ -51,14 +51,12 @@ lok.addEventListener("click", function(){
 if(localStorage.animal != undefined){
     document.getElementById("nimg");
     nimg.src = localStorage.animal;
+    console.log(nimg);
 }
 
-
-
-
-
-
-
+else{
+    nimg.src = ltiger.src;
+}
 
     var newuser = document.getElementById("newuser");
             newuser.addEventListener("click", function(){
@@ -68,6 +66,12 @@ if(localStorage.animal != undefined){
                 ldiv.style.display = "none";
                 luninput.style.display = "block";
                 localStorage.removeItem("firstName");
+                
+                
+                document.getElementById("nimg").innerHTML = " ";
+
+                localStorage.removeItem("firstName");
+                localStorage.removeItem("animal");
             });
 
     var newuser = document.getElementById("newuser");
