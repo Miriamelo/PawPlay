@@ -119,74 +119,88 @@
             background-image: url(img/gameover-frame.svg);
             background-repeat: no-repeat;
             height: 50%;
-            width: 30%;
+            width: 25%;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
             margin: auto;
-            z-index: 999;
             padding: 10px;
-            display: block;
+            display: none;
+            z-index: 500;
         }
         
         #innerGameOver{
-            position: absolute;
+            position: relative;
             width: 90%;
             height: 43%;
 /*            margin-top: 10%;*/
-            bottom: 0;
+            bottom: 2%;
+            padding-top: 55%;
+            margin: auto;
 /*            margin: 5% 0 10% 5%;*/
         }
         
-        #innerGameOver p {
-            position: relative;
-            top: 2%;
-            left: 35%;
-            color: brown;
-            font-size: 1.5em;
-        }
-        
-        .gameoverButs {
+        #buttonsGameOver {
             position: absolute;
-            width: 50px;
-            cursor: pointer;
+            left: 0;
+            margin: auto;
             bottom: 0;
-            display: inline block;
-            margin: 5% 4% 5% 4%;
-            
+            width: 80%;
+            right: 0;
         }
         
         #gobutreplay {
             left: 0;
+            cursor: pointer;
+            width: 70px;
+            bottom: 0;
         }
         
          #gobuthome {
             position: absolute;
+            cursor: pointer;
             right: 0;
+            width: 70px;
         }
+        
+        #finalScoreContainer {
+            position: relative;
+            top: 20%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 75%;
+            height: 30%;
+            background-color: #893f09;
+            text-align: center;
+        }
+        
+        #finalScoreContainer p {
+            color: #fff;
+            position: relative;
+            font-size: 1.5em;
+            font-family: sans-serif;
+        }
+        
         #music {
             position: absolute;
         }
         
-         #gameOver {
-            position: absolute;
-            background-image: url(img/gameover-frame.svg);
-            background-repeat: no-repeat;
-            top: 15vh;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            z-index: 500;
-             
-        }
         
         #timer {
             position: absolute;
             top: 500px;
             background-color: aquamarine;
             font-size: 30pt;
+        }
+        
+        .bgDiv{
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            z-index: 490;
+            background-color: rgba(92, 42, 5, 0.8);
         }
 
 
@@ -227,9 +241,15 @@
     <body onload="init()";>
         
         <div id="gameOver">
-            <img id="gobutreplay" class="gameoverbuts" src="img/replay.svg" onclick="window.location.href='gameplay.html'">
-            <img id="gobuthome" class="gameoverbuts" src="img/home.svg" onclick="window.location.href='../login.html'">
-        
+            <div id="innerGameOver">
+                <div id="finalScoreContainer">
+                <p id="finalscore">0</p>
+                    </div>
+                <div id="buttonsGameOver">
+                    <img id="gobutreplay" class="gameoverbuts" src="img/replay.svg" onclick="window.location.href='gameplay.html'">
+                    <img id="gobuthome" class="gameoverbuts" src="img/home.svg" onclick="window.location.href='../login.html'">
+                </div>
+            </div>
         </div>
         
 
@@ -271,7 +291,7 @@
 
         function FallItem()
         {
-            let r = Math.floor(Math.random() * (imgs.length-1));
+            let r = Math.floor(Math.random() * (imgs.length));
             this.image = new Image();
             this.image.src = imgs[r].src;
             this.points = imgs[r].points;
@@ -322,9 +342,9 @@
         };
   };
 
-    var imgs = [{src:"img/apple.svg", points: -1},
-                {src: "img/rhino-food.svg", points: 1},
-                {src: "img/tiger-food.svg", points: 1}];
+    var imgs = [{src:"img/apple.svg", points: 1},
+                {src: "img/rhino-food.svg", points: -1},
+                {src: "img/tiger-food.svg", points: -1}];
     var amount = 5;
     var player;
     var playerLeft = 228;
@@ -403,11 +423,18 @@
         var sec = timeRemainig%60;
         var strTimeRemaining = (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0"+sec : sec);
         document.getElementById("timer").innerHTML = strTimeRemaining;
-        if(timeRemainig == 0)
+        if(timeRemainig == 0){
             gameOver = true;
-        else
+            var nbgDiv = document.createElement("div");
+            nbgDiv.className = "bgDiv";
+            document.body.appendChild(nbgDiv);
+            var gameOverScr = document.getElementById("gameOver");
+            gameOverScr.style.display = "block";
+            document.getElementById("finalscore").innerHTML = "Your Score: " + score;
+        }else
             setTimeout(updateRemainingTime, 1000);
     }
+               
 
     function init() {
         player = document.getElementById('player');
@@ -420,6 +447,7 @@
             objArr.push(new FallItem());
         }
         updateRemainingTime();
+//        drawGameOver()
         foodFall();
     }
 
