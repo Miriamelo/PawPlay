@@ -1,11 +1,10 @@
  <html>
     <style type="text/css">
-    
-    body {
+
+     body {
         background: url(./img/g-bg-desktop.svg); 
         background-size: cover;
         overflow: hidden;
-    
         }
         
     #playingArea {
@@ -128,6 +127,7 @@
             margin: auto;
             z-index: 999;
             padding: 10px;
+            display: block;
         }
         
         #innerGameOver{
@@ -178,18 +178,21 @@
             right: 0;
             bottom: 0;
             margin: auto;
-            z-index: 1;
+            z-index: 500;
              
         }
         
-       
-        
+        #timer {
+            position: absolute;
+            top: 500px;
+            background-color: aquamarine;
+            font-size: 30pt;
+        }
+
+
     @media (max-width: 700px) {
-        body {
-            background: url("./img/bg-3.svg") no-repeat center center fixed; 
-          -webkit-background-size: contain;
-          -moz-background-size: contain;
-          -o-background-size: contain;
+      body {
+            background: url("./img/bg-3.svg")
           background-size: contain;
     }
         
@@ -212,34 +215,26 @@
             right: 0;
             bottom: 0;
             margin: auto;
-            z-index: 1;
-             
+            z-index: 500;
+            display: block;
         }
+
 }
-        
+
     </style>
-     
-   
+
+
     <body onload="init()";>
         
-         <div id= "playingArea">
-            <div id="gameOver">    
-                <div id="innerGameOver">
-                    <p>TIME OUT!</p>
-                    
-                <img class="gameoverButs" id="gobutreplay" src="img/replay.svg" onclick="window.location.href='gameplay.html'"/>
-                   
-                <img class="gameoverButs" id="gobuthome" src="img/home.svg" onclick="window.location.href='../login.html'"/>
-                
-                </div>
-            </div>
-        </div>
- <!--Music Player -->       
-    <audio controls autoplay loop id="music">
-                <source src="../backgroundmusic.mp3">
-            </audio>
+        <div id="gameOver">
+            <img id="gobutreplay" class="gameoverbuts" src="img/replay.svg" onclick="window.location.href='gameplay.html'">
+            <img id="gobuthome" class="gameoverbuts" src="img/home.svg" onclick="window.location.href='../login.html'">
         
- <!--Top Bar -->      
+        </div>
+        
+
+        <div id= "playingArea">
+
             <div id="topbar">
                 <div id="score">
                     <div id="textscore">
@@ -249,196 +244,196 @@
                     <img id="scorebg" src="./img/scorebg.svg" alt=""/>
                     <img id="scorering" src="./img/scorering.svg" alt=""/>
                 </div>
-            
+
+                <audio controls autoplay loop id="music">
+                    <source src="../backgroundmusic.mp3">
+                </audio>
+                
             <img id="gameplaysettings" alt="1" src="img/gameplaysettings.svg" />
             <img id="lefttopwood" alt="" src="img/lefttopwood.svg" />
 <!--            <div id="middletopwood"></div>-->
             <img id="middletopwood" alt="2" src="img/middle-topwood.svg "/>
             <img id="righttopwood" alt="3" src="img/right-top-wood.svg "/>
         </div>
-            
+
             <div id= "player">
                 <img id="playerimg">
             </div>
-            
+
              <img id="bottombg" src="./img/g-bgbot-desktop.svg" alt=""/>
-            
-    
+
+        </div>
+        <div id="timer"></div>
         
         <script>
- //make game over appear with points
+            var playerimg = document.getElementById("playerimg");
+            playerimg.src = localStorage.animal;
+
+        function FallItem()
+        {
+            let r = Math.floor(Math.random() * (imgs.length-1));
+            this.image = new Image();
+            this.image.src = imgs[r].src;
+            this.points = imgs[r].points;
+            this.image.className = "falling";
+            this.image.style.display = "none";
+            document.body.appendChild(this.image);
+
+            this.destroy = false;
+
+            this.yPos = 60;
+            this.xPos = Math.round(Math.random()*WinWidth);
+            this.speed = Math.random()*5+3;
+            this.cstep = 0;
+            this.step = Math.random()*0.1+0.05;
+            this.collided = false;
+
+        this.update = function()
+        {
+            this.image.style.display = "";
+            sy = this.speed * Math.sin(90 * Math.PI / 180);
+            sx = this.speed * Math.cos(this.cstep);
+            this.yPos += sy;
+            //xPos[i]+=sx;
+            if(this.yPos > WinHeight)
+                this.destroy = true;
+            else
+            {
+                this.image.style.left = Math.min(WinWidth, this.xPos) - 50;
+                this.image.style.top = this.yPos;
+            }
+            this.cstep += this.step;
+        };
+
+        this.checkCollision = function(playerLeft, bWidth, bTop)
+        {
+            if(!this.collided)
+            {
+                if(playerLeft <= this.xPos &&  // left side of the player position
+                  (playerLeft + bWidth) >= this.xPos &&  // right side of the player position
+                  (bTop - this.yPos) < -5)
+                {  // part of the food inside
+                   this.collided = true;
+                   return true;
+                }
+            }
+            else
+                return false;
+        };
+  };
+
+    var imgs = [{src:"img/apple.svg", points: -1},
+                {src: "img/rhino-food.svg", points: 1},
+                {src: "img/tiger-food.svg", points: 1}];
+    var amount = 5;
+    var player;
+    var playerLeft = 228;
+    var score = 0;
+    var WinHeight = window.innerHeight -100;
+    var WinWidth = window.innerWidth -200;
+    var objArr = [];
+    var destructArr = [];
+    var gameOver = false;
+    var timeRemainig = 30;//Remaining Time in seconds
+    
             
-        var playerimg = document.getElementById("playerimg");
-        playerimg.src = localStorage.animal;
-            
-        var player;
-        var playerLeft = 228;
-        var score = 0;  
-        var WinHeight = window.innerHeight -100;
-        var WinWidth = window.innerWidth -200;
-        var collidedItem = '';
+    function foodFall()
+    {
+        var bWidth, bTop;
 
-        // updated to keyListener() function
-        function keyListener(e) {
-          if (!e || (typeof(e)=="undefined")) { e = window.event; }
-          var pArea = document.getElementById("playingArea");
-          if (e.keyCode==37 && playerLeft > 0) {  // key arrow - left
-            playerLeft -= 25;
-            player.style.left = playerLeft + 'px' ;
-    //        isCollide();  // after display, check if collide
-          }
-          else if (e.keyCode==39 && playerLeft < window.innerWidth) {  // key arrow - right
-            playerLeft += 25;
-            player.style.left = playerLeft + 'px' ;
-    //        isCollide();  // after display, check all food if collide
-          }
-        }  // keyListener(Event)
-
-        function init() {
-            player = document.getElementById('player');
-            scoreDisplay = document.getElementById('score');
-            document.onkeydown=keyListener;
-            foodFall();
-
-        }
-
-        //Food array    
-        grphcs=new Array(5)
-        Image0=new Image();
-        Image0.src=grphcs[0]="img/apple.svg";
-        Image1=new Image();
-        Image1.src=grphcs[1]="img/rhino-food.svg";
-        Image2=new Image();
-        Image2.src=grphcs[2]="img/tiger-food.svg";
-        Image3=new Image();
-        Image3.src=grphcs[3]="img/apple.svg";
-        Image4=new Image();
-        Image4.src=grphcs[4]="img/tiger-food.svg";
-        Amount=5;
-        yPos=new Array();
-        xPos=new Array();
-        speed=new Array();
-        step=new Array();
-        cstep=new Array();
-        var stopVal=false;
-
-
-
-        // check if food is collide (may return boolean if needed)
-        function isCollide(foodIdx) {
-          var bWidth, bTop;
-          var collide = false;
-          if (window.getComputedStyle) {
+        if (window.getComputedStyle)
+        {
             bWidth = parseInt(getComputedStyle(player, null)["width"], 10);
             bTop = parseInt(getComputedStyle(player, null)["top"], 10);
-          }
-          else {  // old IE
+        }
+        else // old IE
+        {
             bWidth = parseInt(player.currentStyle["width"], 10);
             bTop = parseInt(player.currentStyle["top"], 10);
-          } 
-
-          if (isNaN(foodIdx) && foodIdx>=0 && foodIdx<grphcs.length) {  // given an food to check
-            var chkfood = document.getElementById("si"+foodIdx);
-
-            // part of the food inside
-            if(playerLeft <= xPos[foodIdx] &&  // left side of the player position
-               (playerLeft+bWidth) >= xPos[foodIdx] &&  // right side of the player position
-               (bTop-yPos[foodIdx]) < parseInt(chkfood.style.height,10)) {
-               console.log("collision: "+i);    
-               return true;
-            }
-
-          }  // end check 1 food
-
-          else {  // check all foods
-            for(var i=0;i<grphcs.length;i++) {
-              var food = document.getElementById("si"+i);
-              if(playerLeft <= xPos[i] &&  // left side of the player position
-                 (playerLeft+bWidth) >= xPos[i] &&  // right side of the player position
-                 (bTop-yPos[i]) < -5) {  // part of the food inside
-                 collide = true;
-                 console.log("collision: "+i);
-                 collidedItem = +i;
-                 mScore();
-              }
-            }
-          }  // end check all foods
-
-          return collide;
-        }  // isCollided(int)
-
-
-
-        // animation of falling foods
-          for(i=0;i<Amount;i++) {
-                   var P=Math.floor(Math.random()*grphcs.length);
-                   rndPic=grphcs[P];
-                   document.write('<img id="si'+i+'" src="'+rndPic+'"style="position:absolute;top:0px;left:0px">');
-              document.getElementById("si"+i).className = "falling";
-               }
-               for(i=0;i<Amount;i++) {
-                   yPos[i]=Math.round(Math.random()*WinHeight);
-                   xPos[i]=Math.round(Math.random()*WinWidth);
-                   speed[i]=Math.random()*5+3;
-                   cstep[i]=0;
-                   step[i]=Math.random()*0.1+0.05;
-               }
-            function foodFall() {
-              if(stopVal) {
-                clear();
-                return;
-              }
-                   for(i=0;i<Amount;i++) {
-                       sy=speed[i]*Math.sin(90*Math.PI/180);
-                       sx=speed[i]*Math.cos(cstep[i]);
-                       yPos[i]+=sy;
-                       //xPos[i]+=sx;
-                       if(yPos[i]>WinHeight) {
-                           yPos[i]=60; xPos[i]=Math.round(Math.random()*WinWidth);
-                           speed[i]=Math.random()*5+3;
-                       }
-                       else
-                       { document.getElementById("si"+i).style.left=Math.min(WinWidth,xPos[i])-50;
-                           document.getElementById("si"+i).style.top=yPos[i];
-                       }
-                       cstep[i]+=step[i]; 
-                   }
-
-                isCollide();
-
-          setTimeout(foodFall, 20);
-        }  // foodFall()
-
-            //start score count
-            function mScore(){
-            if (collide = true && collidedItem == 0 || collidedItem == 1 || collidedItem == 3 ){
-            score -= 1;
-            } else{
-                score += 1;
-            }
-            scoreup = document.getElementById('testscore');
-            scoreup.innerHTML = (score);
-            
-                }
-            //end score count
-
-            
-            
-            
-            
-            
-            
-        function clear() {
-            for(i=0;i<Amount;i++)
-         document.getElementById("si"+i).style.display='none';
         }
 
-                
-          
+        objArr.forEach(function(obj, i)
+        {
+            obj.update();
+            if(obj.destroy)
+            {
+                objArr.splice(objArr.indexOf(obj), 1);
+                objArr.push(new FallItem());
+                destructArr.push(obj);
+            }
+            if(obj.checkCollision(playerLeft, bWidth, bTop))
+                mScore(obj);
+        });
+        clear();
+        if(!gameOver)
+            setTimeout(foodFall, 20);
+    }  // foodFall()
+
+    //start score count
+    function mScore(obj){
+        score += obj.points;
+        scoreup = document.getElementById('testscore');
+        scoreup.innerHTML = (score);
+    }
+    //end score count
+
+    // updated to keyListener() function
+    function keyListener(e) {
+        if (!e || (typeof(e)=="undefined")) { e = window.event; }
+        var pArea = document.getElementById("playingArea");
+        if (e.keyCode==37 && playerLeft > 0) {  // key arrow - left
+            playerLeft -= 25;
+            player.style.left = playerLeft + 'px' ;
+            //        isCollide();  // after display, check if collide
+        }
+        else if (e.keyCode==39 && playerLeft < window.innerWidth) {  // key arrow - right
+            playerLeft += 25;
+            player.style.left = playerLeft + 'px' ;
+            //        isCollide();  // after display, check all food if collide
+        }
+    }  // keyListener(Event)
+
             
             
-        
+            
+    function updateRemainingTime()
+    {
+        timeRemainig -= 1;
+        var min = Math.floor(timeRemainig/60);
+        var sec = timeRemainig%60;
+        var strTimeRemaining = (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0"+sec : sec);
+        document.getElementById("timer").innerHTML = strTimeRemaining;
+        if(timeRemainig == 0)
+            gameOver = true;
+        else
+            setTimeout(updateRemainingTime, 1000);
+    }
+
+    function init() {
+        player = document.getElementById('player');
+        scoreDisplay = document.getElementById('score');
+        document.onkeydown=keyListener;
+
+        //Populate Initial Falling Objects
+        while(objArr.length != amount)
+        {
+            objArr.push(new FallItem());
+        }
+        updateRemainingTime();
+        foodFall();
+    }
+
+    function clear() {
+        destructArr.forEach(function(obj)
+        {
+            document.body.removeChild(obj.image);
+            destructArr.splice(destructArr.indexOf(obj), 1);
+        });
+    }
+
+
         
         </script>
+        
     </body>
     </html>
