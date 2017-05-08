@@ -135,7 +135,7 @@
         left: 2%;
 }
 
-#ttut1 {
+#ttut1{
     height: 65%;
     width: 90%;
     position: absolute;
@@ -216,7 +216,50 @@
     position: absolute;
     display: none;
 }
+    
+#ttut5{
+     height: 65%;
+    width: 90%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    overflow: hidden;
+}
 
+#tutnext5{
+    height: 10%;
+      left: 45%;
+    bottom: 12%;
+    position: absolute;
+    display: none;
+}       
+
+#ttut6{
+     height: 65%;
+    width: 90%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    overflow: hidden;
+}
+
+#tutnext6{
+    height: 10%;
+      left: 45%;
+    bottom: 12%;
+    position: absolute;
+    display: none;
+}   
+  
+    
 #tskip{
     height: 8%;
     right: 0;
@@ -225,14 +268,4 @@
 }
 
 };
-
-
-
-
-
-
-
-
-
-
 
