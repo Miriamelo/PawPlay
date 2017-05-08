@@ -15,13 +15,10 @@ What went well?
     3. We were able to make the SVG's work eaisly
     4. We finished more then we had origionally thought we would
 
-
-
 What did not go as expected?
     1. We quickly found out that nothing is as easy as it seems
     2. The timer was hard to get to work
     3. The counting of points was hard to figure out as well
-
 
 What would you do differently next time?
     1. We would make a sketch and exact plan of what was going to be included so that we didn't waste time on pages or elements that are not included in the final project.
