@@ -100,7 +100,14 @@ body {
   bottom: 0px;
   z-index: -2;
   width: 100vw;
-    height: 25%;
+}
+
+#bottombg2 {
+  position: fixed;
+  bottom: 0px;
+  z-index: -2;
+  width: 100vw;
+  display: none;
 }
 
 #score {
@@ -272,39 +279,67 @@ body {
   animation: alerting 2s infinite;
 }
 
+.controller {
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    bottom: 4%;
+    bottom: 2%;
+    display: none
+
+  }
+
+#left-arrow {
+  position: relative;
+  z-index: 900;
+  float: left;
+  width: 70px;
+}
+
+#left-arrow img {
+  margin-left: 10%
+}
+
+#right-arrow img {
+  margin-right: 10%
+}
+
+#right-arrow {
+  position: relative;
+  z-index: 900;
+  float: right;
+  width: 70px
+
+}
+
 @keyframes alerting {
   0%   { opacity:0; }
   50%  { opacity:1; transform: scale(2)}
   100% { opacity:0; }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   body {
     background: url("./img/bg-3.svg")
     background-size: contain;
   }
 
-  #bottombg {
-    position: fixed;
-    bottom: -4px;
+  #bottombg2 {
+    position: absolute;
+    bottom: -25%;
     z-index: -2;
-    width: 100vw;
+    width: 120vw;
+    display: block;
+    margin-left: -15vw;
   }
-    
+
+  #bottombg {
+    display: none!important;
+  }
 
   #gameOver {
-    position: absolute;
-    background-image: url(img/gameover-frame.svg);
-    background-repeat: no-repeat;
-    height: 80vh;
-    width: 80vw;
-    top: 15vh;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    display: none;
-    z-index: 500;
+    width: 90%;
+    left: 10%;
   }
 
   #mhhome{
@@ -331,4 +366,53 @@ body {
     position: fixed;
     top: 30vh;
     right: 2vw;
+  }
+
+  #player {
+    width: 70px;
+    bottom: 15%;
+  }
+
+  #player-bar {
+    width: 90px;
+    margin-left: -3vw;
+  }
+
+  #bar {
+    height: 12px;
+  }
+
+  .falling {
+    height: 60px;
+    width: 60px;
+  }
+
+  #levelup {
+    width: 90%;
+    left: -5%;
+  }
+
+  #finalScoreContainer {
+    left: -5%;
+    border-radius: 3px;
+  }
+
+  #buttonsGameOver {
+    left: -2%;
+    width: 103%
+  }
+
+  #finalScoreContainer p {
+    font-size: 1.2em;
+    padding: 8%;
+  }
+
+  #bottombg {
+      bottom: 0;
+      z-index: 99;
+      display: block
+  }
+
+  .controller {
+    display: block
   }

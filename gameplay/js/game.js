@@ -6,7 +6,6 @@ if(localStorage.animal != undefined){
   localStorage.animal= "choosetiger.svg";
 }
 
-
 function FallItem(){
   let r = Math.floor(Math.random() * (imgs.length));
 
@@ -14,20 +13,18 @@ function FallItem(){
   this.image.src = imgs[r].src;
   this.points = imgs[r].points;
   this.name = imgs[r].name;
-  
   this.image.className = "falling";
   this.image.style.display = "none";
   document.body.appendChild(this.image);
 
   this.destroy = false;
-    
+
   this.yPos = 60;
   this.xPos = Math.round(Math.random()*WinWidth);
   this.speed = Math.random()*5+3;
   this.cstep = 0;
   this.step = Math.random()*0.1+0.05;
   this.collided = false;
-
 
 this.update = function(){
   this.image.style.display = "";
@@ -45,30 +42,21 @@ this.update = function(){
   this.cstep += this.step;
 };
 
-    
 this.checkCollision = function(playerLeft, bWidth, bTop) {
   if(!this.collided){
     if(playerLeft <= this.xPos &&  // left side of the player position
       (playerLeft + bWidth) >= this.xPos &&  // right side of the player position
-      (bTop - this.yPos) < -5){  // part of the food inside  
+      (bTop - this.yPos) < -5){  // part of the food inside
        this.collided = true;
        return true;
-        
      }}else{
-    return false;   
-       
+    return false;
     }};
 };
 
-/*var gsound = document.getElementById("goodsound");
-            gsound.play();
-        
-var bsound = document.getElementById("badsound");
-        bsound.play();*/
-
-var imgs = [{src:"img/apple.svg", points: 1, name: "apple", sound: "gsound"},
-    {src: "img/rhino-food.svg", points: -1, sound: "bsound"},
-    {src: "img/tiger-food.svg", points: -1, sound: "bsound"}];
+var imgs = [{src:"img/apple.svg", points: 1, name: "apple"},
+    {src: "img/rhino-food.svg", points: -1},
+    {src: "img/tiger-food.svg", points: -1}];
 var amount = 5;
 var player;
 var playerLeft = 228;
@@ -124,6 +112,9 @@ scoreup.innerHTML = (score);
     appleCounter ++;
     document.getElementById('bar').style.width=appleCounter * 10 + "%"
   }
+  if (obj.name == "apple"){
+  playAudio();
+  }
 
 // end player bar 👆🏻👆🏻👆🏻👆🏻
 
@@ -133,7 +124,27 @@ document.getElementsByClassName('round-score')[0].setAttribute('data-percent', `
 }
 //end score count
 
+// audio settings 👇🏻👇👇
+audio =document.getElementById('audio');
 
+function playAudio() {
+  if (!audio) return;
+  audio.currentTime = 0;
+  audio.play()
+}
+
+
+function setHalfVolume() {
+  myAudio = document.getElementById('music');
+  myAudio.play()
+  myAudio.volume = 0.1;
+}
+
+function stopfVolume() {
+  myAudio = document.getElementById('music');
+  myAudio.pause()
+}
+// audio settings 👆🏻👆🏻👆🏻👆🏻
 
 // const keys = document.querySelectorAll('#scoreup');
 // keys.forEach(scoreup => scoreup.addEventListener('transitionend', removeTransition));
@@ -153,6 +164,23 @@ function keyListener(e) {
   }
 }  // keyListener(Event)
 
+leftArrow = document.getElementById('left-arrow');
+leftArrow.addEventListener('click', moveLeft);
+
+function moveLeft(){
+  playerLeft -= 25;
+  player.style.left = playerLeft + 'px' ;
+
+}
+
+rightArrow = document.getElementById('right-arrow');
+rightArrow.addEventListener('click', moveRight);
+
+function moveRight(){
+  playerLeft += 25;
+  player.style.left = playerLeft + 'px' ;
+
+}
 
 
 
@@ -165,13 +193,13 @@ function updateRemainingTime(){
   var gameOverScr = document.getElementById("gameOver");
   var nbgDiv = document.createElement("div");
   document.getElementById("timer").innerHTML = strTimeRemaining;
-
+  setHalfVolume()
 
 
   if(timeRemainig == 0 && appleCounter < 10){
 
     gameOver = true;
-
+    stopfVolume();
     nbgDiv.className = "bgDiv";
     document.body.appendChild(nbgDiv);
     gameOverScr.style.display = "block";
@@ -181,8 +209,8 @@ function updateRemainingTime(){
     }
 
     if (timeRemainig == 0 && appleCounter >= 10){
+      stopfVolume();
       gameOver = true;
-
       nbgDiv.className = "bgDiv";
       document.body.appendChild(nbgDiv);
       gamewinScr.style.display = "block";
