@@ -100,6 +100,7 @@ body {
   bottom: 0px;
   z-index: -2;
   width: 100vw;
+    height: 25%;
 }
 
 #score {
@@ -277,7 +278,7 @@ body {
   100% { opacity:0; }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   body {
     background: url("./img/bg-3.svg")
     background-size: contain;
@@ -288,8 +289,8 @@ body {
     bottom: -4px;
     z-index: -2;
     width: 100vw;
-    display: none;
   }
+    
 
   #gameOver {
     position: absolute;
